@@ -1,11 +1,11 @@
 frontend:
   image: uneasyyang001/frontend
-  tag: 06a5828
+  tag: eb8dc62
   autoscaling:
     averageUtilization: 90
 backend:
   image: uneasyyang001/backend
-  tag: 06a5828
+  tag: eb8dc62
   autoscaling:
     averageUtilization: 90
 database:
