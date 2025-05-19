@@ -18,16 +18,16 @@ spec:
       containers:
       - name: react-frontend
         image: "{{ .Values.frontend.image }}:{{ .Values.frontend.tag }}"
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "128m"
-          limits:
-            memory: "256Mi"
-            cpu: "256m"
+        # resources:
+        #   requests:
+        #     memory: "128Mi"
+        #     cpu: "128m"
+        #   limits:
+        #     memory: "256Mi"
+        #     cpu: "256m"
 ---
 apiVersion: v1
 kind: Service
