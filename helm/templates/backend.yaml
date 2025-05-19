@@ -28,13 +28,13 @@ spec:
           value: "{{ .Values.database.username }}"
         - name: DATABASE_PASSWORD
           value: "{{ .Values.database.password }}"
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "128m"
-          limits:
-            memory: "256Mi"
-            cpu: "256m"
+        # resources:
+        #   requests:
+        #     memory: "128Mi"
+        #     cpu: "128m"
+        #   limits:
+        #     memory: "256Mi"
+        #     cpu: "256m"
         readinessProbe: 
           httpGet:
             path: /healthy
